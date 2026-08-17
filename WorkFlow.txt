@@ -1,0 +1,59 @@
+Dataset link: https://data.mendeley.com/datasets/zfv4jj7855/1
+
+1. Import the packages
+2. Dataset Preparation
+	- Collect tomato disease data
+		- Leaf spot → Bacterial Spot + Septoria Leaf Spot
+		- Blight → Early Blight + Late Blight
+		- Mildew → Leaf Mold
+		- Healthy
+3. Visualization 
+	- Class labels in bar graph 
+	- Sample Label images
+4.  Preprocessing
+	- Load images from folders and split into train/validation.
+	- Resize images to 128×128 and convert to RGB.
+	- Shuffle and batch the data.
+	- Apply EfficientNet preprocessing (normalize/scale).
+	- Convert datasets to NumPy arrays.
+	- One-hot encode the labels.
+4. Model Training
+	- CNN
+	- ResNet
+	- DenseNet
+	- MobileNet
+	- Xception
+	- NASNetLarge
+	- Hybrid Model ( Xception + NASNetLarge )
+5. Evaluation
+	- Classification Report
+	- Confusion Matrix
+	- ROC curve
+	- Train/val history graphs
+	- Matrics : 
+		- Accuracy
+		- Precision 
+		- Recall
+		- F1-Score
+	- Compare the all model metrics in the table and generate the Comparison Graphs
+6. Save the models 
+7. XAI 
+	- Along with the trained model visualize the the GradCAM heatmap image
+
+Flask Web App:
+=============
+1. The frontend is developed using the Flask framework, with a registration and login system supported by an SQLite database.
+2. The frontend allows the user to provide input data for prediction.
+3. The user uploads an image through an input form.
+4. The uploaded image is preprocessed for classification using a trained model.
+5. The trained model is used to classify the disease.
+6. The final output is displayed on the frontend, explaining the predicted disease, Disease Causes & Reasons, Treatment Recommendations with a GTTS voice-over.
+
+Extension:
+==========
+
+As an extension we have applied Xception, NASNetLarge, Ensemble (Xception + NASNetLarge) to be classified, for our trained models testing highest accuracy got 97.5% for Tomato plant leaf disease classification.
+
+Furthermore, we employed XAI techniques GradCAM to generate heatmaps which highlights the important region of the image that contributes to the way a model performs as it does. 
+
+Along with this extension ensemble model we used Flask Framework for UI for user provides input for prediction using trained models for dataset
